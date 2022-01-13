@@ -1,3 +1,3 @@
-# keon-utils
+# Experimental projects
 
-Misc. projects, mostly casual.
+repo for experimental projects or experimentation with different libraries.
