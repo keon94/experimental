@@ -58,12 +58,14 @@ func TestIndexAndSearchJSON_QueryByMatch(t *testing.T) {
 	}
 
 	titleIndex1 := "test1"
+	var id1 string
 	{
 		indexResponses := createIndices(t, func() (*esapi.Response, error) {
+			id1 = strconv.Itoa(time.Now().Nanosecond())
 			return cli.Index(
 				titleIndex1,
 				bytes.NewBuffer(ReadFile(t, "data/file1.json")),
-				cli.Index.WithDocumentID(strconv.Itoa(time.Now().Nanosecond())),
+				cli.Index.WithDocumentID(id1),
 				cli.Index.WithRefresh("true"),
 			)
 		})
@@ -89,16 +91,25 @@ func TestIndexAndSearchJSON_QueryByMatch(t *testing.T) {
 		require.NoError(t, err)
 		require.False(t, res.IsError())
 		js := BodyToJSON(t, res.Body)
+		fmt.Printf("SEARCH response:\n%s\n", js)
 		value := gjson.Get(js, "hits.total.value").Float()
 		took := gjson.Get(js, "took").Float()
 		fmt.Printf("[%s] %f hits; took: %fms", res.Status(), value, took)
 		hits := gjson.Get(js, "hits.hits").Array()
 		require.Greater(t, len(hits), 0)
-		for _, hit := range gjson.Get(js, "hits.hits").Array() {
+		for _, hit := range hits {
 			id := hit.Get("_id").Value()
 			src := hit.Get("_source").Value()
 			fmt.Printf(" * ID=%v, %v\n", id, src)
 		}
+	}
+	{
+		res, err := cli.Get(titleIndex1, id1)
+		require.NoError(t, err)
+		require.False(t, res.IsError())
+		js := BodyToJSON(t, res.Body)
+		fmt.Printf("GET response:\n%s\n", js)
+		require.True(t, gjson.Get(js, "found").Bool())
 	}
 }
 
