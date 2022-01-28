@@ -8,8 +8,8 @@ services:
     image: neo4j:4.0
     volumes:
       - neo4j-data:/data
-      - neo4j-import:/plugins
-      - neo4j-plugins:/import
+      - neo4j-plugins:/plugins
+      - neo4j-import:/import
     ports:
       - "7474"
       - "7687"
