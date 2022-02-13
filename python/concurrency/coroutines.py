@@ -11,7 +11,7 @@ def call_generator(g: Generator[T, T, T], first_run: bool, val: T) -> T:
         return e.value  # this will be the return value
 
 
-def run_coroutine():
+def run_number_generator():
     def num_gen(upper: int, predicate: Callable[[int], bool]) -> Generator[int, int, int]:
         i = 0
         while i < upper:
@@ -37,7 +37,7 @@ def run_coroutine():
 
 
 def main():
-    run_coroutine()
+    run_number_generator()
 
 
 if __name__ == "__main__":
