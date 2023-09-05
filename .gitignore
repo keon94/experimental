@@ -1,9 +1,0 @@
-.settings
-.classpath
-.project
-.iml
-*.iml
-*.crt
-*.key
-.idea/
-target/

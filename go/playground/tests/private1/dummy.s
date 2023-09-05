@@ -1,1 +1,0 @@
-// this will make the compiler be ok with partial function declarations.
