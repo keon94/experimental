@@ -1,0 +1,31 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* Write your CSS below, don't change the rules above. */
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: red;
+}
+
+.note {
+  font-size: 20px;
+}
+
+#id-selector-demo {
+  background-color: #eee;
+  color: green;
+}
+
+/* this syntax to perform an OR in css */
+li[value="4"],li[value="5"][class="note"] { 
+  color: blue;
+}
+
+* {
+  text-align: center;
+}
