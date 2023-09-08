@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 0.5fr;
+      grid-template-rows: 100px 200px 200px;
+      gap: 30px;
+    }
+
+    .first {
+      grid-column: span 2;
+    }
+
+    .last.card {
+      grid-row: span 3;
+      grid-column: span 2;
+      background-color: red;
+    }
+
+    .last.card>p {
+      color: white;
+      text-align: center;
+      position: relative;
+      /* left: 50%; */
+      margin: 0;
+      font-size: 6rem;
+      padding-top: 70px;
+    }
+
+    .card {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Grid</h1>
+  <div class="grid-container">
+    <div class="first card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="last card">
+      <p>Hello World</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
