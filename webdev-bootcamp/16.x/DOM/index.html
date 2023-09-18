@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #the-button {
+            background-color: rgb(217, 211, 211);
+            width: auto;
+            height: 50px;
+        }
+
+        #the-button>* {
+            display: inline-block;
+        }
+
+        .checkbox-style {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body onload="alert('Hello (Inline)')">
+    <h1>Hello</h1>
+    <div id="the-button">
+        <input type="checkbox" />
+        <p>Hi</p>
+        <button>Click me</button>
+    </div>
+    <hr>
+    <ul>
+        <li><a href="https://www.google.com">Google</a></li>
+        <li>Facebook</li>
+        <li>Twitter</li>
+    </ul>
+</body>
+
+<script type="text/javascript">
+    alert('Hello (Internal)');
+</script>
+
+<script src="index.js"></script>
+
+</html>

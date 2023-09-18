@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicee</title>
+    <style>
+        body {
+            background-color: #343a40;
+        }
+
+        .refresher {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+        button {
+            background-color: transparent;
+            border-radius: 1rem;
+            color: #fff;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 4rem;
+            margin-top: 5rem;
+            color: rgb(74, 167, 108);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* border: none; */
+        }
+
+        .dice {
+            margin: 5rem;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player-text {
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 2rem;
+            margin: 1rem;
+            color: rgb(74, 167, 108);
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .die {
+            margin: 1rem;
+            margin-top: 3rem;
+            width: 10rem;
+        }
+
+        footer {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer>span {
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="refresher">
+        <button>
+            Refresh Me
+        </button>
+    </div>
+
+    <div class="dice">
+        <div>
+            <h2 class="p1 player-text">Player 1</h2>
+            <img class="p1 die" src="" alt="Dice 1">
+        </div>
+        <div>
+            <h2 class="p2 player-text">Player 2</h2>
+            <img class="p2 die" src="" alt="Dice 2">
+        </div>
+    </div>
+    <footer>
+        <span>www 🎲 App Brewery 🎲 com</span>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
