@@ -1,0 +1,55 @@
+.selected {
+    text-decoration: line-through;
+}
+
+body {
+    background-color: #e4e9fd;
+    background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+    min-height: 1000px;
+    font-family: "helvetica neue";
+}
+
+.input {
+    outline: none;
+    border-color: black;
+    border: 0px;
+    padding-bottom: 10px;
+    margin: 1px;
+}
+
+.input-selected {
+    border-bottom: 1px solid black;
+}
+
+.submit-button {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.submit-button-text {
+    font-size: 18pt;
+    border-color: transparent;
+}
+
+.title-bar {
+    background-color: purple;
+}
+
+.container-size {
+    width: 400px;
+}
+
+.title-text {
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.footer-text {
+    font-size: small;
+}
+
+.navitem-text {
+    width: 80px;
+}

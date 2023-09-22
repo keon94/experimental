@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "ESNext",
+    },
+    "ts-node": {
+        "esm": true,
+        "compilerOptions": {
+            "module": "NodeNext",
+        }
+    }
+}
