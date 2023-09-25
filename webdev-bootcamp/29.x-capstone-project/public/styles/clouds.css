@@ -1,0 +1,111 @@
+@keyframes animateCloud {
+    0% {
+        transform: translateX(-30%);
+    }
+
+    50% {
+        transform: translateX(30%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+@keyframes animateInlineCloud {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+    animation: animateInlineCloud 20s linear infinite;
+    position: absolute;
+    left: 40%;
+}
+
+.x1-delay {
+    animation: animateInlineCloud 20s linear infinite;
+    left: 35%;
+    position: absolute;
+    animation-delay: 2s;
+}
+
+.x2 {
+    animation: animateCloud 30s linear infinite;
+    position: relative;
+    left: 40%;
+    animation-delay: 1s;
+}
+
+/* OBJECTS */
+
+.sun-moon {
+    z-index: -1;
+    position: relative;
+    text-align: center;
+}
+
+.cloud {
+    background: #fff;
+    background: -moz-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fff), color-stop(100%, #f1f1f1));
+    background: -webkit-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -o-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -ms-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f1f1f1', GradientType=0);
+
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    position: relative;
+    width: 350px;
+    transform: scale(0.5);
+    z-index: 1;
+}
+
+.cloud:after,
+.cloud:before {
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.cloud:after {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+
+    height: 100px;
+    left: 50px;
+    top: -50px;
+    width: 100px;
+}
+
+.cloud:before {
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+
+    width: 180px;
+    height: 180px;
+    right: 50px;
+    top: -90px;
+}

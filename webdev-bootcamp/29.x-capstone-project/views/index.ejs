@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/clouds.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="banner nighttime-colors">
+        <div class="sun-moon">
+            <img src="/img/moon.svg" alt="Sun-Moon">
+        </div>
+        <div class="x1">
+            <div class="cloud"></div>
+        </div>
+        <div class="x1-delay">
+            <div class="cloud"></div>
+        </div>
+        <div class="x2">
+            <div class="cloud"></div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="nav-item nav-item-tab box">
+            <form action="/" method="GET" class="nav-item-form">
+                <input type="submit" value="Forecast" class="nav-item-content">
+                <img src="/img/weather-icon.svg" alt="Forecast" height="50px" style="padding-right: 5px;">
+            </form>
+        </div>
+        <div class="nav-item nav-item-tab box">
+            <form action="/history" method="GET" class="nav-item-form">
+                <input type="submit" value="History" class="nav-item-content">
+                <img src="/img/history.svg" alt="History" height="50px" width="20px" style="padding-left: 5px;">
+            </form>
+        </div>
+        <div class="nav-item searchbar box">
+            <form action="/search" method="GET">
+                <input type="text" name="city" placeholder="Enter a city" class="box searchbar-content ">
+                <input type="submit" value="Submit" class="box searchbar-button ">
+            </form>
+        </div>
+    </div>
+    <div class="separator" style="margin: 0"></div>
+    <div class="title">
+        <span id="line1">Weather Forecast</span>
+        <span id="line2">for Kansas City, MO</span>
+    </div>
+    <div class="forecast-container">
+        <div>
+            <div class="current-condition box">
+                <img src="./img/sunny.png" alt="Clear" width="100%">
+            </div>
+            <div class="current-condition box">
+                <span class="last-updated-time">Last Updated: Sept. 24th, 12:00 PM</span>
+                <div class="temp">75&deg;F</div>
+                <div class="sky">Clear</div>
+                <div class="wind">Wind: 5mph</div>
+                <div class="humidity">Humidity: 50%</div>
+            </div>
+        </div>
+        <div class="forecast">
+            <div class="day-card box">
+                <h2>Today</h2>
+                <img src="./img/sunny.png" alt="Sunny" class="weather-img">
+                <p>Sunny</p>
+                <p>High: 75&deg;F</p>
+                <p>Low: 60&deg;F</p>
+                <div class="forecast-description">
+                    Praesent vitae diam egestas, feugiat erat eget, rhoncus nisi. Suspendisse nec libero quis orci blandit commodo ac eu tellus. Praesent consequat tempor tellus, non dapibus enim. In justo turpis, commodo eget fringilla eget, porttitor vel libero. Sed nec tristique ipsum, eget semper elit. Donec hendrerit, justo a luctus congue, magna erat rhoncus dolor, non cursus diam dolor non elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed venenatis et mi pulvinar consectetur. Vestibulum tempor orci finibus nunc auctor, eget aliquam dui varius. Nam non nunc eget metus aliquet scelerisque. Vestibulum purus orci, sagittis sed ex vitae, congue vulputate dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </div>
+            </div>
+            <div class="day-card box">
+                <h2>Tuesday</h2>
+                <img src="./img/scattered-clouds.png" alt="Scattered Clouds" class="weather-img">
+                <p>Mostly Sunny</p>
+                <p>High: 70&deg;F</p>
+                <p>Low: 55&deg;F</p>
+                <div class="forecast-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac pharetra libero. Phasellus pretium dui vitae molestie vestibulum. Vivamus ultricies vitae velit vel imperdiet. Pellentesque varius turpis consequat nisi fringilla volutpat. Duis mattis nisl nec pellentesque sagittis. Suspendisse varius turpis quis turpis sagittis, at convallis tortor blandit. Phasellus lobortis aliquet urna dictum hendrerit. Morbi convallis pulvinar nibh, ac hendrerit enim sagittis in.
+                </div>
+            </div>
+            <div class="day-card box">
+                <h2>Wednesday</h2>
+                <img src="./img/mostly-cloudy.png" alt="Mostly Cloudy" class="weather-img">
+                <p>Partly Cloudy</p>
+                <p>High: 70&deg;F</p>
+                <p>Low: 45&deg;F</p>
+                <div class="forecast-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac pharetra libero. Phasellus pretium dui vitae molestie vestibulum. Vivamus ultricies vitae velit vel imperdiet. Pellentesque varius turpis consequat nisi fringilla volutpat. Duis mattis nisl nec pellentesque sagittis. Suspendisse varius turpis quis turpis sagittis, at convallis tortor blandit. Phasellus lobortis aliquet urna dictum hendrerit. Morbi convallis pulvinar nibh, ac hendrerit enim sagittis in.
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </div>
+            </div>
+            <div class="day-card box">
+                <h2>Thursday</h2>
+                <img src="./img/rainy.png" alt="Rainy" class="weather-img">
+                <p>Showers</p>
+                <p>High: 60&deg;F</p>
+                <p>Low: 35&deg;F</p>
+                <div class="forecast-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac pharetra libero. Phasellus pretium dui vitae molestie vestibulum. Vivamus ultricies vitae velit vel imperdiet. Pellentesque varius turpis consequat nisi fringilla volutpat. Duis mattis nisl nec pellentesque sagittis. Suspendisse varius turpis quis turpis sagittis, at convallis tortor blandit. Phasellus lobortis aliquet urna dictum hendrerit. Morbi convallis pulvinar nibh, ac hendrerit enim sagittis in.
+
+                </div>
+            </div>
+            <div class="day-card box">
+                <h2>Friday</h2>
+                <img src="./img/snow.png" alt="Snowy" class="weather-img">
+                <p>Snow</p>
+                <p>High: 40&deg;F</p>
+                <p>Low: 25&deg;F</p>
+                <div class="forecast-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac pharetra libero. Phasellus pretium dui vitae molestie vestibulum. Vivamus ultricies vitae velit vel imperdiet. Pellentesque varius turpis consequat nisi fringilla volutpat. Duis mattis nisl nec pellentesque sagittis. Suspendisse varius turpis quis turpis sagittis, at convallis tortor blandit. Phasellus lobortis aliquet urna dictum hendrerit. Morbi convallis pulvinar nibh, ac hendrerit enim sagittis in.
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <section id="footer">
+        <div type="footer" class="footer">
+            Copyright 2023
+        </div>
+    </section>
+</body>
+
+</html>

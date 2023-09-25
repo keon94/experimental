@@ -1,0 +1,242 @@
+:root {
+    --accent-color: #07032add;
+    --separator-color: var(--accent-color);
+    --color-1: rgb(205, 205, 207);
+    --color-2: rgb(248, 251, 251);
+    --color-3: #f2f2f2;
+    --color-4: #fff;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.banner {
+    bottom: 0;
+    left: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    max-width: var(--max-width);
+    /*background-color: rgb(173, 121, 24);*/
+    /*opacity: 100%;*/
+}
+
+.daytime-colors {
+    background: linear-gradient(0deg, rgb(206, 144, 111) 1%, rgba(121, 194, 196, 1) 65%, rgba(0, 237, 255, 1) 87%);
+}
+
+.nighttime-colors {
+    background: linear-gradient(0deg, rgb(25, 26, 33) 1%, rgb(75, 84, 129) 45%, rgba(15, 111, 201, 0.518) 97%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: 200%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--color-1);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding-left: 10px;
+    background-color: var(--color-2);
+    height: 150px;
+}
+
+.nav-item {
+    justify-content: center;
+    align-items: start;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* max-width: inherit; */
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    height: 25px;
+    flex-basis: auto;
+}
+
+.nav-item-form {
+    display: flex;
+    position: relative;
+    bottom: 10px;
+}
+
+.nav-item-content {
+    border: none;
+    background-color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.nav-item-tab {
+    width: 100px;
+}
+
+.searchbar {
+    flex: 1;
+    display: flex;
+    /* flex-basis: 100%; */
+    margin: 0;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    text-align: end;
+    padding: 0;
+    height: auto;
+    padding-right: 10px !important;
+}
+
+.searchbar-content {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.searchbar-button {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    background-color: var(--separator-color);
+    border-color: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+
+#line1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2em;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+#line2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.current-condition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    margin-right: 0;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    font-size: 20px;
+    background-color: var(--color-3);
+    height: 300px;
+    width: 300px;
+}
+
+.current-condition>.temp {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.forecast-container {
+    display: flex;
+    margin: 20px 0 0 0;
+    border-width: 10px;
+    border-color: black;
+    height: 600px;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    /*How to make rows work with equal heights??*/
+    flex-grow: 0;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-left: 25px;
+    border-width: 10px;
+    border-color: black;
+    overflow-y: auto;
+}
+
+.day-card {
+    text-align: center;
+    background-color: var(--color-4);
+    padding: 20px;
+    border-width: 1px;
+    border-style: solid;
+    height: max-content;
+}
+
+.day-card>.forecast-description {
+    text-align: start;
+}
+
+.day-card h2 {
+    margin-top: 0;
+}
+
+.separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: var(--separator-color);
+}
+
+.day img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.day p {
+    margin: 0;
+}
+
+.weather-img {
+    width: 120px;
+    height: 120px;
+}
+
+.last-updated-time {
+    font-size: 15px;
+    position: relative;
+    bottom: 20%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    max-width: inherit;
+    flex-basis: 50px;
+}
