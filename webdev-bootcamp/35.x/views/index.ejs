@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+<section>
+    <div class="container-fluid p-0">
+        <ul class="list-group">
+            <% if (locals.items) { %>
+            <% for(let i = 0; i < locals.items.length; i++) { %>
+            <li class="list-group-item checkbox-item">
+                <div class="row mt-2 mb-2">
+                    <div class="col-10">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox-<%= i %>">
+                        <label class="form-check-label stretched-link" for="checkbox-<%= i %>"><%= locals.items[i] %></label>
+                    </div>
+                    <!-- <div class="col text-end">
+                        <button class="col btn btn-danger btn-sm delete-button" type="submit">
+                            <div class="text-center delete-button-text">-</div>
+                        </button>
+                    </div> -->
+                </div>
+            </li>
+            <% } %>
+            <% } %>
+            <li class="list-group-item p-1">
+                <div class="row mt-1 mb-1">
+                    <form id="submit-form" action="<%= submitPath %>" method="POST">
+                        <input id="new-item" class="col-10 form-check-label stretched-link text-center align-items-center justify-content-center mt-2 input" type="text" name="new-item" placeholder="New Item">
+                        <button class="col btn btn-primary btn-sm submit-button float-end" type="submit">
+                            <div class="mb-0 text-center submit-button-text">+</div>
+                        </button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <div class="col text-center my-3">
+            <button id="delete-button" class="col btn btn-danger btn-sm delete-button disabled" endpoint="<%= deletePath %>" type="submit">
+                <div class="text-center delete-button-text">Removed Selected</div>
+            </button>
+        </div>
+    </div>
+</section>
+<%- include('partials/footer.ejs') %>
