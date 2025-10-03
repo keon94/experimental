@@ -24,14 +24,10 @@ function(get_dependencies)
 endfunction()
 
 
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.10)
 project(playground)
 
-set(CMAKE_CXX_STANDARD 20)
-
-# the below are added to match msvc macros (running msvc 22)
-add_compile_definitions(__cpp_lib_concepts=201907L)
-add_compile_definitions(__cpp_lib_coroutine=201902L)
+set(CMAKE_CXX_STANDARD 23)
 
 file(GLOB_RECURSE src_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "src/*.cpp")
 file(GLOB_RECURSE h_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "include/*.h" "include/*.hpp") #no .tpp files for template implementations because their impl needs to be header-scoped (singletons)
@@ -40,7 +36,7 @@ include_directories("include")
 message("adding sources: ${h_files} ${src_files}")
 
 #set to 0 to run main/main.cpp, set to 1 to run tests/
-set(testing 1)
+set(testing 0)
 
 if (testing)
     get_dependencies("googletest")

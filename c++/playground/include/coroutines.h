@@ -1,8 +1,6 @@
 #ifndef PLAYGROUND_COROUTINES_H
 #define PLAYGROUND_COROUTINES_H
 
-#pragma message("including PLAYGROUND_COROUTINES_H")
-
 #include <iostream>
 #include <coroutine>
 
